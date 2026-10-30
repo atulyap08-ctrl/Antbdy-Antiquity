@@ -6,7 +6,7 @@ class NaturalnessScorer:
     def __init__(self, chain="heavy"):
         print(f"Loading AbLang2 model for {chain} chain...")
         # Load a pretrained AbLang2 model for a heavy chain
-        self.model = ablang.pretrained(chain=chain, iterative=False)
+        self.model = ablang.pretrained(chain=chain)
         self.model.freeze()
 
     def score_sequence(self, vh_sequence: str)->float :
