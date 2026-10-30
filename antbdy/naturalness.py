@@ -15,7 +15,7 @@ class NaturalnessScorer:
     formatted_seq = f"{vh_sequence}:"
 
     # Call the model directly with mode='pseudo_log_likelihood'
-    score = self.model([formatted_seq], mode="pseudo_log_likelihood")
+    score = self.model([formatted_seq], mode="likelihood")
 
     # Handle array or scalar return types safely
     if hasattr(score, "__getitem__"):
