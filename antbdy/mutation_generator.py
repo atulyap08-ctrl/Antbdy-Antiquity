@@ -25,6 +25,16 @@ IMPORTANT:
     are retained separately. No evolutionary branch length is
     assumed, and no unconditional mutation probabilities
     are calculated.
+
+caveats:
+ -We use frame_offset=0 because we're assuming your first nucleotide begins a complete codon.
+ -The module expects the coding strand in 5′→3′ orientation. If you accidentally supply the complementary strand, 
+the code cannot reliably discover that from sequence composition alone.
+
+ -Incomplete terminal codons: The default is to reject them. Only use incomplete_codon="trim" when you know the 
+trailing nucleotides are outside the coding region.
+
+    
 """
 
 import json
