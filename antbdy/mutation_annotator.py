@@ -33,6 +33,11 @@ Reading frame:
 IMPORTANT:
     The input must already be in the 5' -> 3' coding orientation.
     This module does not infer biological strand orientation.
+
+ -Incomplete terminal codons: The default is to reject them. Only use incomplete_codon="trim" when you know the 
+trailing nucleotides are outside the coding region.
+
+    
 """
 
 import pandas as pd
